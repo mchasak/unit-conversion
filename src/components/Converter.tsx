@@ -24,10 +24,11 @@ const Converter = <U extends string>({ units, convert }: ConverterProps<U>) => {
   };
 
   /**
-  * Po přepnutí záložky se vybere první jednotka ze seznamu
+  * Po přepnutí záložky se vybere první jednotka ze seznamu a msažou se předchozí hondoty
   */
   useEffect(() => {
     setInputUnit(units[0]);
+    setConversionResults([]);
   }, [units]);
 
   return (

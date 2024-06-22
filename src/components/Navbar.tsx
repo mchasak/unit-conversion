@@ -4,12 +4,12 @@ import React from 'react'
 type NavbarLinkProps = {
     links: string[]
     selectedTab: number;
-    handleTabChange: (event: any, newValue: number) => void;
+    handleTabChange: (newValue: number) => void;
 }
 
 export const NavbarLink: React.FC<NavbarLinkProps> = ({links, selectedTab, handleTabChange}) => {
     return (
-        <Tabs value={selectedTab} onChange={handleTabChange}>
+        <Tabs value={selectedTab} onChange={(event, newValue) => handleTabChange(newValue)}>
             {links.map((link, index) => (
                 <Tab key={index} label={link} />
             ))}

@@ -4,20 +4,16 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#1976d2',
-      light: '#63a4ff', 
-      dark: '#004ba0',
-      contrastText: '#fff',
+      light: '#4EB5E7', 
     },
 
     secondary: {
       main: '#333',
       light: '#ccc',
-
     },
     text: {
       primary: '#000', 
-      secondary: '#555',
-      disabled: '#aaa',
+      secondary: '#fff',
     },
   },
   typography: {
@@ -33,10 +29,10 @@ const theme = createTheme({
 
     MuiTabs: {
       styleOverrides: {
-        root: {
-          backgroundColor: 'lightBlue',
+        root: ({ theme }) =>  ({
+          backgroundColor: theme.palette.primary.light,
           width: '100%',
-        }
+        })
       }
     },
 

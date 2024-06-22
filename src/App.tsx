@@ -17,7 +17,7 @@ const App: React.FC = () => {
   /**
    * Změna záložky
    */
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (newValue: number) => {
     setSelectedTab(newValue);
   };
 
